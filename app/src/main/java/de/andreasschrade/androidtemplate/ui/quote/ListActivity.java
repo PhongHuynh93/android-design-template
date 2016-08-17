@@ -30,6 +30,7 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
 
         setupToolbar();
 
+//        todo 2 - detect device: mobile or tablet
         if (isTwoPaneLayoutUsed()) {
             twoPaneMode = true;
             LogUtil.logD("TEST","TWO POANE TASDFES");
@@ -66,6 +67,7 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
         ab.setDisplayHomeAsUpEnabled(true);
     }
 
+//    add fragment
     private void setupDetailFragment() {
         ArticleDetailFragment fragment =  ArticleDetailFragment.newInstance(DummyContent.ITEMS.get(0).id);
         getFragmentManager().beginTransaction().replace(R.id.article_detail_container, fragment).commit();
